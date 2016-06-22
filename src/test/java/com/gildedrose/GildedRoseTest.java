@@ -1,3 +1,6 @@
+
+package com.gildedrose; 
+
 import com.gildedrose.GildedRose;
 import com.gildedrose.Item;
 import org.junit.Test;
@@ -152,9 +155,11 @@ public class GildedRoseTest {
         //when
         app.updateQuality();
         assertEquals(0, app.items[0].sellIn);
+        System.out.println("After"+app.items[0].quality);
         assertEquals(10, app.items[0].quality);
 
         app.updateQuality();
+        System.out.println("After"+app.items[0].quality);
         assertEquals(-1, app.items[0].sellIn);
         assertEquals(10, app.items[0].quality);
         //then
